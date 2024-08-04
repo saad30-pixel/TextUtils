@@ -14,9 +14,10 @@ export default function Navbar(props) {
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
           <li className="nav-item">
           <Link className="nav-link active" aria-current="page" to="/textform">Home</Link>
+          {/* /textform Add it back to href for routing */}
           </li>
           <li className="nav-item">
-          <Link className="nav-link" to="/about">{props.aboutText}</Link>
+          <Link className="nav-link active" to="/about">{props.aboutText}</Link>
           </li>
           </ul>
         <form className="d-flex" role="search">
@@ -28,7 +29,7 @@ export default function Navbar(props) {
           <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Dark Mode</label>
     </div>
     <div className={`form-check form-switch text-${props.mode==='light'?'gray':'light'}`}>
-          <input className="form-check-input mx-1" onClick={props.toggleMode1} type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
+          <input className="form-check-input mx-1" onClick={props.toggleMode1} type="checkbox" role="switch" id="flexSwitchCheckDefault1"/>
           <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Gray Mode</label>
     </div>
     </div>
@@ -36,12 +37,7 @@ export default function Navbar(props) {
     </nav>
   )
 }
-Navbar.propTypes = {title: PropTypes.string,
-
-                    aboutText: PropTypes.string
-                    }
-
-Navbar.defaultProps = {
-  title: 'Set title here',
-  aboutText: 'About text here'
-};
+Navbar.propTypes = {
+  title: PropTypes.string,
+  aboutText: PropTypes.string
+}
