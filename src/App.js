@@ -3,7 +3,7 @@ import './App.css';
 import About from './Components/About';
 import Navbar from './Components/Navbar';
 import Textform from './Components/Textform';
-import Alert from './Alert';
+import Alert from './Components/Alert';
 import {
     BrowserRouter as Router,
     Routes,
@@ -28,12 +28,12 @@ function App() {
     const toggleMode1 = ()=>{
         if(mode === 'light'){
             setMode('gray');
-            document.body.style.backgroundColor = '#808080';
+            document.body.style.backgroundColor = 'rgb(179 181 184)';
             showAlert("Gray mode has been enabled", "success");
         }
         else{
             setMode('light');
-            document.body.style.backgroundColor = 'light'
+            document.body.style.backgroundColor = 'white'
             showAlert("Light mode has been enabled", "success");
         }
     }
@@ -46,7 +46,7 @@ function App() {
         }
         else{
             setMode('light');
-            document.body.style.backgroundColor = 'light'
+            document.body.style.backgroundColor = 'white'
             showAlert("Light mode has been enabled", "success");
         }
     }
